@@ -37,7 +37,32 @@
 
 创建 Docker，并将 Flask 应用程序及其依赖项打包为一个可执行的容器。
 
-### TODO
+```sh
+./build_docker.sh
+```
+
+打开 `127.0.0.1:5000/person`，可以看到成功已经部署到容器中了。
+
+![example](images/showcase.png)
+
+### 2. 使用 k8s 管理 Docker 容器
+
+本质上这一步只是对上一步配置的 Docker 容器进行自动化的部署、扩容、容灾管理等，其实概念上并不复杂，需要学习一下 k8s 的相关工具。
+
+#### 2.1 安装 k8s
+
+a. 命令行工具：kubectl
+
+```sh
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+mkdir -p ~/.local/bin
+mv ./kubectl ~/.local/bin/kubectl
+
+export PATH="/home/civitasv/.local/bin:$PATH"
+```
+
+TODO.
 
 ## Reference
 
