@@ -1,4 +1,4 @@
-# 使用基础 Python 3.9 镜像
+# 使用基础 Python 3.10 镜像
 FROM python:3.10
 
 # 设置工作目录
